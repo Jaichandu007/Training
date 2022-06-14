@@ -1,16 +1,33 @@
 import java.util.*;
 public class AccountTest{
     public static void main(String[] args){
+        Account account1 = new Account("jai", 50.00);
+        Account account2 = new Account("Jc", 100);
+
+        System.out.printf("%s balance: $%.2f%n",
+        account1.getName(), account1.getBalance());
+        System.out.printf("%s balance: $%.2f%n%n",
+        account2.getName(), account2.getBalance());
+
+
         Scanner input = new Scanner(System.in);
-        // int acc;
-        Account myAccount = new Account();
-        System.out.printf("Intial name is: %s%n%n", myAccount.getName());
-        System.out.println("Please enter the name");
-        String theName = input.nextLine();
-        myAccount.setName(theName);
-        System.out.println();
-        System.out.printf("Name in object myAccount is: %n%s%n", myAccount.getName());
-    }
-    }
+
+        System.out.println("Enter deposit amount for account1 \n");
+        double depositAmount = input.nextDouble();
+        account1.deposit(depositAmount);
+
+        System.out.printf("%s balance: $%.2f%n",account1.getName(), account1.getBalance());
+        System.out.printf("%s balance: $%.2f%n",account2.getName(), account2.getBalance());
 
 
+        System.out.printf("Enter deposit amount for account2 \n");
+        depositAmount = input.nextDouble();
+        
+        System.out.printf("%n adding %.2f to account balance %n%n",depositAmount);
+        account2.deposit(depositAmount);
+
+        System.out.printf("%s balance: $%.2f%n",account1.getName(),account1.getBalance());
+        System.out.printf("%s balance: $%.2f%n",account2.getName(),account2.getBalance());
+
+    }
+}

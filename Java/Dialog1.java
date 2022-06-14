@@ -3,7 +3,7 @@ public class Dialog1
 {
     public static void main(String[] args)
     {
-        JOptionPane.showMessageDialog(null, "Timeup");
+        JOptionPane.showMessageDialog(null, "Shuttting Down");
     }
     
 }
