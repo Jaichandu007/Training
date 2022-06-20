@@ -94,3 +94,6 @@ class Ans3{
         System.out.printf("Total zero numbers: %d\n", No_of_Zeros);
     }
 }
+
+
+
