@@ -27,67 +27,51 @@ class Ans2 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a five digit number");
         number = input.nextInt();
-        if ((number >= 10000) && (number <= 99999)){
-            System.out.printf("%d   ", (number/10000));
-            System.out.printf("%d   ", (number/1000)%10);
-            System.out.printf("%d   ", (number%100)%10);
-            System.out.printf("%d   ", (number%100)/10);
-            System.out.printf("%d   ", (number%10));
+        while(number<10000 || number>99999){
+            System.out.println("enter a five digit number please");
+            number = input.nextInt();
         }
-        if (number < 10000){
-            System.out.println("The number you entered is smaller than five digits");
-        }
-        if (number > 99999){
-            System.out.println("The number you entered is greater than five digits");
-        }
+        int [] arr = new int[5];
+      
 
+            for(int i=0; i<5; i++){
+                arr[i] = number%10;
+                number = number/10;
+            }
+        
+            for(int a=0; a<5; a++){
+                System.out.print(arr[4-a] + " ");
+            }
+    
     }
+    
 }
 
 class Ans3{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        int num1, num2, num3, num4, num5;
+        int[] arr = new int[5];
         int No_of_Pos=0 , No_of_Neg=0 , No_of_Zeros=0;
         System.out.println("Enter 5 numbers");
-        num1 = input.nextInt();
-        num2 = input.nextInt();
-        num3 = input.nextInt();
-        num4 = input.nextInt();
-        num5 = input.nextInt();
-        if(num1 > 0)
-            No_of_Pos=No_of_Pos+1;
-        if(num2 > 0)
-            No_of_Pos=No_of_Pos+1;
-        if(num3 > 0)
-            No_of_Pos=No_of_Pos+1;
-        if(num4 > 0)
-            No_of_Pos=No_of_Pos+1;
-        if(num5 > 0)
-            No_of_Pos=No_of_Pos+1;
-
-        if(num1 < 0)
-            No_of_Neg=No_of_Neg+1;
-        if(num2 < 0)
-            No_of_Neg=No_of_Neg+1;
-        if(num3 < 0)
-            No_of_Neg=No_of_Neg+1;
-        if(num4 < 0)
-            No_of_Neg=No_of_Neg+1;
-        if(num5 < 0)
-            No_of_Neg=No_of_Neg+1;
-
-        if(num1==0)
-            No_of_Zeros=No_of_Zeros+1;
-        if(num2==0)
-            No_of_Zeros=No_of_Zeros+1;
-        if(num3==0)
-            No_of_Zeros=No_of_Zeros+1;
-        if(num4==0)
-            No_of_Zeros=No_of_Zeros+1;
-        if(num5==0)
-            No_of_Zeros=No_of_Zeros+1;
-
+        for(int i=0;i<5;i++)
+        {
+            arr[i] = input.nextInt();
+        }
+        for(int i=0;i<5;i++)
+        {
+        if(arr[i] < 0)
+        {
+            No_of_Neg++;
+        }
+        else if ( arr[i] > 0)
+        {
+            No_of_Pos++;
+        }
+        else 
+        {
+            No_of_Zeros++;
+        }
+    }
         System.out.println();
         System.out.printf("Total postive numbers: %d\n", No_of_Pos);
         System.out.printf("Total negative numbers: %d\n", No_of_Neg);
@@ -96,7 +80,7 @@ class Ans3{
 }
 
 
-class Ans4 {
+public class Ans5 {
    public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
 	
@@ -117,3 +101,83 @@ class Ans4 {
 
 }
 
+
+
+class Ans6 {
+    public static void main(String[] args)
+    {
+        int number;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a five digit number");
+        number = input.nextInt();
+        while(number<10000 || number>99999){
+            System.out.println("enter a five digit number please");
+            number = input.nextInt();
+        }
+        int [] arr = new int[5];
+
+        for(int i=0; i<5; i++){
+                arr[i] = number%10;
+                number = number/10;
+            }
+
+                if(arr[0]== arr[4] && arr[1]== arr[3])
+                {
+                    System.out.println("It is a palindrome");
+                }
+                else
+                {
+                    System.out.println("Not a palindrome");
+                }
+    }
+    
+}
+
+
+
+class Ans7 {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter Range");
+        int Range = input.nextInt();
+        if(Range < 500)
+        {
+        for(int a=1;a<Range;a++)
+        {
+            for(int b=1;b<Range;b++)
+            {
+                for(int c=1;c<Range;c++)
+                {
+                    if(c==Math.sqrt((Math.pow(a, 2)+(Math.pow(b, 2)))) && a<b)
+                    {
+                        System.out.printf("%d %d %d \n",a,b,c);
+                    }
+                }
+            }
+        }
+    
+    }
+    else
+    {
+        System.out.println("Get lost");
+    }
+}
+}
+
+
+
+class Ans8 {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter number");
+        int num = input.nextInt();
+        int fact= 1;
+        for(int i=0;i<num;i++)
+        {
+            fact = (fact)*(num-i);
+            
+        }
+        System.out.println(fact);
+    }
+    
+}
