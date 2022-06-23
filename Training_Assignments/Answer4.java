@@ -1,22 +1,53 @@
-package Training.Training_Assignments;
-import java.util.*;
 
-public class Answer4 {
-   public static void main(String[] args){
-    Scanner sc = new Scanner(System.in);
-	
-    System.out.println("Enter Size");
-	
-    int size = sc.nextInt();
+public class Answer4{
+		 String Employee;
+		 int hours;
+		 int grosspay;
+		int hourlyrate;
+		// public Employee(String Employee ,int hours)
+		// {
+		// 	this.Employee = Employee;
+		// 	this.hours = hours;
+		// }
+		public String getEmployee()
+		{
+			return Employee;
+		}
+		public void setEmployee(String Employee)
+		{
+			this.Employee = Employee;
+		}
+		public int getHours()
+		{
+			return hours;
+		}
+		public void setHours(int hours)
+		{
+			this.hours = hours;
+		}
+		public int getHourlyrate()
+		{
+			return hourlyrate;
+		}
+		public void setHourlyrate(int hourlyrate)
+		{
+			this.hourlyrate = hourlyrate;
+		}
 
-		for (int i = 1; i <=size; i++) {
-			for (int j = 1; j <= size; j++) 
-				if((i==1 || i==size) || (j==1 || j==size))
-					System.out.print("* ");
-				else
-					System.out.print("  ");
-			
-			System.out.println();
-        }
-    }
-}
+		public int calcpay(int hours){
+			if(hours <= 40)
+		{
+			grosspay = hours*hourlyrate;
+		}
+		else if(hours>40)
+		{
+			grosspay = (hourlyrate*40 + (hours-40)*(hourlyrate/2));
+		}
+		else{
+			System.out.println("Invalid input. Shutting down.");
+		}
+		return grosspay;
+
+		}
+		
+	} 
