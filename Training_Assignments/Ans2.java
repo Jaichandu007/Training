@@ -12,12 +12,7 @@ public class Ans2 {
             number = input.nextInt();
         }
         int [] arr = new int[5];
-       
-            // System.out.printf("%d   ", (number/10000));
-            // System.out.printf("%d   ", (number/1000)%10);
-            // System.out.printf("%d   ", (number%100)%10);
-            // System.out.printf("%d   ", (number%100)/10);
-            // System.out.printf("%d   ", (number%10));
+      
 
             for(int i=0; i<5; i++){
                 arr[i] = number%10;
