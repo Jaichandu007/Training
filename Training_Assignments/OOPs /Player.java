@@ -1,7 +1,9 @@
+import java.util.Scanner;
 public class Player {
-    String Playr;
-    public Player(String Playr)
-    {
-        this.Playr = Playr;
-    }
+        public int Guess()
+        {
+            Scanner input = new Scanner(System.in);
+            int a = input.nextInt();
+            return a;
+        }
 }
