@@ -8,23 +8,6 @@ public class Points {
             this.X = X;
             this.Y = Y;
         }
-    
-        // public vertices(int X)
-        // {
-        //     X = input.nextInt(); 
-        //     return X;
-        // }
-        // public Points(int Y)
-        // {
-        //     Y = input.nextInt();   
-        //     return Y ;
-        // }
-
-
-        // {
-        //     this.X = X;
-        //     this.Y = Y;
-        // }
          public void setX(int X)
          {
             this.X = X;

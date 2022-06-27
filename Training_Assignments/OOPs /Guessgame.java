@@ -35,12 +35,6 @@ public class Guessgame {
         System.out.printf("Number is %d\n ",num);
         break;
     }
-    // else
-    // { 
-    // P1 = input.nextInt();
-    // P2 = input.nextInt();
-    // P3 = input.nextInt();
-    // }
 
 }
 }
